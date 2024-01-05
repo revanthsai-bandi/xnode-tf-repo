@@ -1,0 +1,12 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "revanthaws1/my-public-images:xnode",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 80
+    }
+  ]
+}      
