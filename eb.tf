@@ -27,7 +27,8 @@ resource "aws_elastic_beanstalk_environment" "environment" {
   setting {
     namespace = "aws:elasticbeanstalk:environment"
     name      = "ServiceRole"
-    value     = "arn:aws:iam::639834290217:role/service-role/aws-elasticbeanstalk-service-role"
+    # value     = "arn:aws:iam::639834290217:role/service-role/aws-elasticbeanstalk-service-role"
+    value = aws_iam_instance_profile.beanstalk_service.name
   }
   setting {
     namespace = "aws:ec2:vpc"
@@ -167,7 +168,8 @@ resource "aws_elastic_beanstalk_environment" "environment" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
-    value     = "ec2-admin"
+    # value     = "ec2-admin"
+    value = aws_iam_instance_profile.beanstalk_ec2.name
   }
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
