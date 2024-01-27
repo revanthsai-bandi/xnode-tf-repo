@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-bucket-001"
+  bucket = "${var.application}-tf-001"
 
   tags = {
     name        = var.application
