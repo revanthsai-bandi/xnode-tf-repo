@@ -1,5 +1,0 @@
-region_primary = "us-east-2"
-access_key     = "AKIAZJ6IYPAU5CPYXKAS"
-secret_key     = "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"
-application    = "xnode-auto-1"
-environment    = "dev"
